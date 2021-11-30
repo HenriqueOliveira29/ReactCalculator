@@ -1,15 +1,28 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import Display from "./comps/Display";
+import ButtonPanel from "./comps/ButtonPanel";
+import "./App.css";
 
-export default class APP extends React.Component{
-
-}
-render()
+export default class APP extends React.Component
 {
-  return(
-    <div className="component-app">
-        <Display></Display>
-    </div>
-  );
+  state = {
+    total:null,
+    next: null,
+    operation: null
+  };
+  
+  handleClick = buttonName =>{
+    //this.setState(calculate(this.state,buttonName));
+  }
+
+  render()
+  {
+    return(
+      <div className="component-app">
+          <Display value={this.state.next || this.state.total || "0"}></Display>
+          <ButtonPanel clickHandler = {this.handleClick}></ButtonPanel>
+      </div>
+    );
+  }
 }

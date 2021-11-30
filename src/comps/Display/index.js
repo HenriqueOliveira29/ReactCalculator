@@ -1,14 +1,15 @@
 import { render } from "@testing-library/react";
 import React from "react";
 import PropTypes from "prop-types";
+import "./index.css";
 
 
 
 export default class Display extends React.Component{
-    static PropTypes ={
+    static propTypes ={
         value: PropTypes.string,
     }
-}
+
 render()
 {
     return(
@@ -16,4 +17,5 @@ render()
             <div>{this.props.value}</div>
         </div>
     )
+}
 }
