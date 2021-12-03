@@ -16,6 +16,15 @@
     margin: 0 1px 0 0;
     flex: 1 0 auto;
     padding: 0;
+    transition: 0.3s;
+}
+.component-button button:hover{
+    background-color: #9c9c9c;
+    border: 0;
+    font-size: 1.5rem;
+    margin: 0 1px 0 0;
+    flex: 1 0 auto;
+    padding: 0;
 }
 
 .component-button:last-child button{
@@ -24,5 +33,11 @@
 }
 
 .component-button.blue button{
-    background-color: #101868;
+    background-color: #2dc653;
+    color: white;
+    transition: 0.3s ;
+}
+.component-button.blue button:hover{
+    background-color: #25a244;
+    color: white;
 }
